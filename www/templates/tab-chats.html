@@ -1,62 +1,56 @@
-<ion-view view-title="Chats">
+
+
+<ion-view view-title="chat">
+  <ion-nav-bar >
+  </ion-nav-bar>
+
+<!-- <div class="list card" id="cameraTabDefaultPage-card22" style="margin-left: 0px;margin-right: 0px;margin-top: 45px;">
+      <ion-item class="item-avatar" id="cameraTabDefaultPage-list-item10">
+        <h2>Item</h2>
+      </ion-item>
+</div> -->
+
+    <div class="list card " id="cameraTabDefaultPage-card22" style="margin-left: 0px;margin-right: 0px;margin-top: 45px;">
+      <ion-item class="item-avatar item-icon-right balanced" id="cameraTabDefaultPage-list-item10">
+        <img src="img/7Q5zKynTASJ6M0HPDdy6_18301614_1153117164798063_2786292534547726916_n.jpg">
+        <h2balanced  >นพ.เจม บอนด์และทีม
+          <p style="font-size: 0.7em;">โรงพยาบาลสงขลานครินทร์</p>
+          <p style="font-size: 0.7em;">เวลาตอบกลับ 18.00น. - 22.00น.</p>
+          <i class="icon ion-android-add-circle"></i>
+        </h2balanced>
+      </ion-item>
+    </div>
+
+
+<!-- <ion-card  style="margin-left:0px;margin-right: 0px;margin-top: 60px;">
+
+  <ion-item class="item item-text-wrap">
+    This is a basic Card which contains an item that has wrapping text.
+  </ion-item>
+ 
+</ion-card> -->
+
+ <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
 <style>div.intro{text-align: right;}</style>
-  <ion-content class="content-stable">
-     <div class="item item-avatar " ng-repeat="chat in chats">
-        <div ng-class="{'intro':chat.user=='Guest'}">
+
+  <ion-content class="content-stable has-header " style="margin-left: 10px;margin-right: 10px;">
+     <div class="spacer" style="height: 90px;"></div>
+     <div   ng-repeat="chat in chats">
+        <div  ng-class="{'intro':chat.user=='Guest'}">
           <img>
-          <h2  >{{chat.user}}</h2>
-          <p  >{{chat.message}}</p>
+          <p style="color: grey">{{chat.user}}</p>
+          <span class="chatmessage span" >{{chat.message}}</span>
         </div>
     </div> 
     </ion-content>
-   <!--  <ion-content class="content-stable"
-                 on-swipe-left="hideTime = false"
-                 on-swipe-right="hideTime = true">
 
-      <div ng-repeat="chat in chats"
-           ng-class="{other: chat.user != myId}"
-           class="messages">
-
-        <div class="message" ng-class="{'slide-right': hideTime, '': !hideTime}">
-          <span>{{ chat.message }}</span>
-        </div>
-
-        <div class="time" ng-class="{'slide-right': hideTime, '': !hideTime}">{{chat.message}}</div>
-
-
-      </div>
-      </ion-content> -->
-
-
-<!--      <ion-footer-bar> 
-    <form>
-      <div class="list">
-        <div class="item item-input-inset">
-          <label class="item-input-wrapper">
-            <input type="text" placeholder="Write something" ng-model="chat.message">
-          </label>
-          <button class="button button-positive ion ion-paper-airplane" ng-click="sendChat(chat)"></button>
-        </div>
-      </div>
-    </form> -->
-
-    
     <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
           <label class="item-input-wrapper">
             <input type="text" placeholder="Write something" ng-model="chat.message">
           </label>
-          <button class="button button-positive ion ion-paper-airplane" ng-click="sendChat(chat)"></button>
+          <button style="background:#7ec8ba;" class="button button-positive ion ion-paper-airplane" ng-click="sendChat(chat)"></button>
     </ion-footer-bar>
-
-
-
-   <!--   </ion-footer-bar> 
-     <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
-      <label class="item-input-wrapper">
-        <input type="text" placeholder="พิมพ์ข้อความ"  ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
-      </label>
-      <button class="button button-positive ion ion-paper-airplane" ng-click="sendChat(chat) ">
-      </button>
-    </ion-footer-bar> -->
-  
+    
 </ion-view>
