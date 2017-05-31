@@ -1,17 +1,36 @@
-<ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      <b>Psst!</b> - Try <a href="http://view.ionic.io/">Ionic View</a> to easily share and test your app with clients and co-workers.
-    </p>
+<ion-view title="News" style="background-color:#f8f8f8;" >
+  <ion-nav-bar >
+
+  </ion-nav-bar>
+  <ion-content   class="has-header" >
+    <ion-slides  disable-side-menu-drag=""  options="{'loop': true}"  slider="slider1" delegate-handle="slider1" id="news-slider1" class="button-full" style="width:100%;height:200px;margin-top: -10px;">
+
+      <ion-slide-page  id="news-slide24" style="background:url(&quot;img/avfsZwJT9WGsBj982ul1_kitten1.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page id="news-slide25" style="background:url(&quot;img/gHd5vedGQJu4s4qsPQvr_kitten2.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page id="news-slide26" style="background:url(&quot;img/WE6rB9dZRTiIWQlP5qsA_kitten3.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+    </ion-slides>
+<br>
+<p style="font-size: 1.2em;margin-left: 10px">ข่าวน่าสนใจ</p>
+    <div style="margin-left: 10px;margin-right: 10px">
+        <ion-list id="chatss-list1" >
+      <ion-item class="item-thumbnail-left" ui-sref="tab.new1() ">
+        <img  src="img/new1.jpg">
+        <h3>การบายพาสหลอดเลือดหัวใจ</h3>
+        <pre style="font-size: 0.8em;color: grey" >   CABG คือการผ่าตัดรักษาโรคหลอดเลือดหัวใจตีบ ด้วยการนำ...</pre>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" ui-sref="tab.new2() ">
+        <img  src="img/new2.jpg">
+        <h3>ภาวะไขมันในเลือดสูง</h3>
+        <pre style="font-size: 0.8em;color: grey" >   โคเลสเตอรอล คือ ไขมันชนิดหนึ่งที่ร่างกายเราสร้างขึ้น พบใน...</pre>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" ui-sref="tab.new3() ">
+        <img  src="img/new3.jpg">
+        <h3>การดูแลสุขภาพฟัน</h3>
+        <pre style="font-size: 0.8em;color: grey" >   เมื่อผิวของฟันถูกปกคลุมไปด้วยแผ่นที่บางและเหนียวที่เกิดจาก...</pre>
+      </ion-item>
+    </ion-list>
+     </div>
+    
+
   </ion-content>
 </ion-view>

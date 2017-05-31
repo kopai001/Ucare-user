@@ -49,11 +49,39 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-
+/*---------------------------------------------*/
+  .state('tab.new1', {
+    url: '/new1',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/new1.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+   .state('tab.new2', {
+    url: '/new2',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/new2.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+    .state('tab.new3', {
+    url: '/new3',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/new3.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+/*----------------------------------------------*/
   .state('tab.chats', {
       url: '/chats',
       views: {
-        'tab-chats': {
+        'tab-allchat': {
           templateUrl: 'templates/tab-chats.html',
           controller: 'ChatsCtrl'
         }
@@ -62,7 +90,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
-        'tab-chats': {
+        'tab-allchat': {
           templateUrl: 'templates/chat-detail.html',
           controller: 'ChatDetailCtrl'
         }
@@ -77,9 +105,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         controller: 'AccountCtrl'
       }
     }
+  })
+
+
+
+
+
+
+  .state('tab.allchat', {
+    url: '/allchat',
+    views: {
+      'tab-allchat': {
+        templateUrl: 'templates/allchat.html',
+        controller: 'allchatCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/chats');
+  $urlRouterProvider.otherwise('/tab/allchat');
 
 });
